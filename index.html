@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>鼻子上的管子，不一定要一直掛著｜鼻胃管與胃造口民眾指南</title>
+<meta name="description" content="認識鼻胃管、胃造口與恢復由口進食，學會問醫師的關鍵問題，預先表達自己的意願。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF7F6; --paper:#FFFFFF; --ink:#12343B; --ink-soft:#3E5A60;
+  --teal:#028090; --teal-soft:#D3EEEE; --orange:#E8552D; --orange-soft:#FFE1D6;
+  --amber:#F4A93C; --amber-soft:#FFF0D2; --line:#BFDCDA; --blush:#FFB9A3;
+  --skin:#FFDDBF; --hair:#E4E7EA; --ok:#1C8C5A; --no:#C9432A;
+  --display:"Huninn","Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif;
+  --body:"Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F2428; --paper:#17333A; --ink:#EAF4F3; --ink-soft:#B9CFD0;
+    --teal:#35B7C4; --teal-soft:#1D4750; --orange:#FF7A55; --orange-soft:#4A2C24;
+    --amber:#F7BC5E; --amber-soft:#43381F; --line:#2E5860; --blush:#E0907A;
+    --skin:#F2CBA8; --hair:#CDD3D8; --ok:#4CC38A; --no:#FF8467;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F2428; --paper:#17333A; --ink:#EAF4F3; --ink-soft:#B9CFD0;
+  --teal:#35B7C4; --teal-soft:#1D4750; --orange:#FF7A55; --orange-soft:#4A2C24;
+  --amber:#F7BC5E; --amber-soft:#43381F; --line:#2E5860; --blush:#E0907A;
+  --skin:#F2CBA8; --hair:#CDD3D8; --ok:#4CC38A; --no:#FF8467;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.75;-webkit-text-size-adjust:100%}
+img,svg{max-width:100%}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.3;margin:0}
+p{margin:.4em 0 .9em}
+a{color:var(--teal)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:2px dashed var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:10px;height:64px}
+.brand{font-family:var(--display);font-size:20px;white-space:nowrap;color:var(--teal)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;flex:1;padding:4px 2px}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;text-decoration:none;color:var(--ink);background:var(--paper);border:2px solid var(--line);border-radius:999px;padding:4px 14px;font-size:17px}
+.chips a:hover{border-color:var(--teal)}
+.theme-btn{flex:none;border:2px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;width:42px;height:42px;font-size:18px}
+
+/* hero */
+.hero{padding:44px 0 30px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(38px,6vw,64px);letter-spacing:.02em}
+.hero h1 .line2{display:block;color:var(--teal)}
+.hero .lead{font-size:22px;color:var(--ink-soft);max-width:30em}
+.stage{background:var(--paper);border:3px solid var(--ink);border-radius:36px 36px 36px 8px;padding:18px;box-shadow:8px 8px 0 var(--amber);position:relative}
+.stage svg{display:block;width:100%;height:auto}
+.stage .caption{text-align:center;font-family:var(--display);font-size:22px;margin:4px 0 10px;min-height:1.6em}
+.big-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:3px solid var(--ink);background:var(--orange);color:#fff;border-radius:999px;padding:12px 26px;font-size:21px;font-weight:700;box-shadow:4px 4px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.big-btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.big-btn.alt{background:var(--teal)}
+.stage .big-btn{width:100%}
+.tube{stroke-dasharray:420;stroke-dashoffset:0;transition:stroke-dashoffset 1.4s ease-in}
+.removed .tube{stroke-dashoffset:420}
+.tape{transition:opacity .5s .9s}
+.removed .tape{opacity:0}
+.mouth-sad{transition:opacity .4s 1.1s}
+.mouth-happy{opacity:0;transition:opacity .4s 1.1s}
+.removed .mouth-sad{opacity:0}
+.removed .mouth-happy{opacity:1}
+.bowl{opacity:0;transform:translateY(30px);transition:opacity .6s 1.3s,transform .6s 1.3s}
+.removed .bowl{opacity:1;transform:none}
+.spark{opacity:0}
+.removed .spark{animation:pop 1.2s 1.5s both}
+@keyframes pop{0%{opacity:0;transform:scale(.2)}40%{opacity:1;transform:scale(1.2)}100%{opacity:1;transform:scale(1)}}
+.spark{transform-box:fill-box;transform-origin:center}
+
+/* sections */
+section.block{padding:54px 0}
+.head{margin-bottom:26px;max-width:760px}
+.head h2{font-size:clamp(30px,4.2vw,44px)}
+.head p{font-size:20px;color:var(--ink-soft)}
+.tag{display:inline-block;font-family:var(--display);background:var(--amber-soft);color:var(--ink);border:2px solid var(--amber);border-radius:10px;padding:0 12px;font-size:18px;margin-bottom:10px;transform:rotate(-2deg)}
+
+/* stats as sticky notes */
+.notes{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.note{background:var(--paper);border:3px solid var(--ink);padding:20px 18px 16px;border-radius:6px 22px 6px 22px;position:relative}
+.note:nth-child(1){background:var(--amber-soft);transform:rotate(-1.5deg)}
+.note:nth-child(2){background:var(--teal-soft);transform:rotate(1deg)}
+.note:nth-child(3){background:var(--orange-soft);transform:rotate(-.6deg)}
+.note:nth-child(4){background:var(--paper);transform:rotate(1.4deg)}
+.note::before{content:"";position:absolute;top:-14px;left:50%;width:70px;height:24px;margin-left:-35px;background:color-mix(in srgb,var(--amber) 55%,transparent);transform:rotate(-4deg);border-radius:3px}
+.note b{display:block;font-family:var(--display);font-weight:400;font-size:42px;line-height:1.1;color:var(--orange)}
+.note span{font-size:18px}
+.note small{display:block;color:var(--ink-soft);font-size:15px;margin-top:6px;line-height:1.5}
+.aside-msg{margin-top:28px;background:var(--paper);border-left:8px solid var(--teal);border-radius:0 18px 18px 0;padding:16px 22px;font-size:20px}
+
+/* compare */
+.switch{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.switch button{border:3px solid var(--ink);background:var(--paper);color:var(--ink);border-radius:999px;padding:8px 20px;font-size:20px;font-weight:700}
+.switch button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.way{background:var(--paper);border:3px solid var(--line);border-radius:26px;padding:22px;transition:border-color .2s,opacity .2s}
+.way.focus{border-color:var(--ink);box-shadow:6px 6px 0 var(--teal)}
+.compare.filtered .way:not(.focus){opacity:.45}
+.way h3{font-size:30px;display:flex;align-items:center;gap:10px}
+.way .icon{width:54px;height:54px;flex:none}
+.way dl{margin:14px 0 0}
+.way dt{font-weight:700;color:var(--teal);font-size:17px;margin-top:12px}
+.way dd{margin:0;font-size:18px}
+
+/* quiz */
+.quiz{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.q{background:var(--paper);border:3px solid var(--ink);border-radius:24px;padding:20px 22px}
+.q .qt{font-size:22px;font-weight:700;margin:0 0 12px}
+.ox{display:flex;gap:12px}
+.ox button{flex:1;border:3px solid var(--ink);background:var(--bg);color:var(--ink);border-radius:18px;font-family:var(--display);font-size:34px;padding:4px 0;line-height:1.4}
+.ox button:hover{background:var(--amber-soft)}
+.q .ans{display:none;margin-top:14px;padding:12px 16px;border-radius:14px;font-size:18px}
+.q.done .ans{display:block;animation:rise .35s ease-out}
+.q.right .ans{background:color-mix(in srgb,var(--ok) 16%,var(--paper))}
+.q.wrong .ans{background:color-mix(in srgb,var(--no) 14%,var(--paper))}
+.q .ans strong{font-size:20px}
+.q.done .ox button{pointer-events:none;opacity:.55}
+.q.done .ox button.picked{opacity:1;background:var(--amber)}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.score{margin-top:22px;font-family:var(--display);font-size:24px;min-height:1.5em}
+
+/* timeline */
+.timeline{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:step}
+.timeline::before{content:"";position:absolute;top:36px;left:6%;right:6%;border-top:5px dotted var(--teal)}
+.stop{position:relative;text-align:center}
+.stop .dot{width:72px;height:72px;margin:0 auto 12px;border-radius:50%;background:var(--paper);border:4px solid var(--teal);display:grid;place-items:center;font-family:var(--display);font-size:20px;line-height:1.1;position:relative;z-index:1}
+.stop:nth-child(3) .dot{background:var(--orange);border-color:var(--orange);color:#fff}
+.stop h3{font-size:22px;margin-bottom:6px}
+.stop p{font-size:17px;text-align:left;background:var(--paper);border-radius:16px;padding:12px 14px;margin:0}
+
+/* questions card */
+.two{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:start}
+.card{background:var(--paper);border:3px solid var(--ink);border-radius:26px;padding:24px}
+.card h3{font-size:28px;margin-bottom:10px}
+.checks{list-style:none;padding:0;margin:0}
+.checks li{border-bottom:2px dashed var(--line);padding:10px 0}
+.checks label{display:flex;gap:12px;align-items:flex-start;font-size:20px;cursor:pointer}
+.checks input{width:26px;height:26px;margin-top:6px;accent-color:var(--teal);flex:none}
+.row-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.row-btns .big-btn{font-size:19px;padding:10px 22px}
+.toast{min-height:1.5em;color:var(--ok);font-weight:700;margin-top:10px}
+.talk{display:grid;gap:14px}
+.bubble{background:var(--teal-soft);border-radius:22px 22px 22px 4px;padding:14px 18px;font-size:19px}
+.bubble:nth-child(even){background:var(--orange-soft);border-radius:22px 22px 4px 22px}
+.bubble b{display:block;font-size:16px;color:var(--ink-soft);font-weight:500}
+
+/* helper */
+.helper{background:var(--paper);border:3px solid var(--ink);border-radius:30px;padding:26px;box-shadow:8px 8px 0 var(--teal)}
+.hq{margin-bottom:20px}
+.hq p{font-size:21px;font-weight:700;margin:0 0 10px}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opts button{border:3px solid var(--line);background:var(--bg);color:var(--ink);border-radius:16px;padding:8px 18px;font-size:19px}
+.opts button[aria-pressed="true"]{border-color:var(--ink);background:var(--amber)}
+.result{display:none;margin-top:10px;background:var(--amber-soft);border-radius:20px;padding:18px 22px;font-size:19px}
+.result.show{display:block;animation:rise .35s ease-out}
+.result h3{font-size:24px;margin-bottom:6px}
+.result ul{margin:.4em 0;padding-left:1.3em}
+.fine{font-size:16px;color:var(--ink-soft)}
+
+/* prepare */
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.path .p{background:var(--paper);border-radius:22px;padding:20px;border:3px solid var(--line);position:relative}
+.path .n{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;font-family:var(--display);font-size:22px;margin-bottom:8px}
+.path h3{font-size:23px;margin-bottom:6px}
+.path p{font-size:17px;margin:0}
+.daily{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.daily div{background:var(--teal-soft);border-radius:22px;padding:18px 20px}
+.daily h3{font-size:22px;margin-bottom:4px}
+.daily p{font-size:17px;margin:0}
+
+/* footer */
+footer{padding:40px 0 60px;border-top:2px dashed var(--line);margin-top:30px}
+.refs{font-size:15px;color:var(--ink-soft);line-height:1.6}
+.refs ol{padding-left:1.3em}
+.sign{font-family:var(--display);font-size:22px;margin-top:20px}
+.hotline{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
+.hotline a{text-decoration:none;border:3px solid var(--ink);border-radius:999px;padding:6px 20px;background:var(--paper);color:var(--ink);font-weight:700;font-size:19px}
+
+@media (max-width:900px){
+  .hero .wrap,.two{grid-template-columns:1fr}
+  .notes,.path{grid-template-columns:repeat(2,1fr)}
+  .compare,.quiz,.daily{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr;gap:14px}
+  .timeline::before{top:10px;bottom:10px;left:36px;right:auto;border-top:0;border-left:5px dotted var(--teal)}
+  .stop{display:grid;grid-template-columns:72px 1fr;gap:14px;text-align:left;align-items:start}
+  .stop .dot{margin:0}
+  .brand{display:none}
+}
+@media (max-width:520px){
+  body{font-size:18px}
+  .notes,.path{grid-template-columns:1fr}
+  .note{transform:none!important}
+  .hero{padding-top:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
+@media print{
+  .nav,.hero,.theme-btn,.row-btns,#quiz,#helper,#compare,#numbers,#timeline,#prepare,#peg,#cost,#faq,#world,#research,footer{display:none!important}
+  body{background:#fff;color:#000}
+  .two{grid-template-columns:1fr}
+  .card{border:2px solid #000;box-shadow:none}
+}
+
+/* ===== v2 additions ===== */
+.chart-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin-top:26px}
+.chart{background:var(--paper);border:3px solid var(--ink);border-radius:26px;padding:22px}
+.chart h3{font-size:24px;margin-bottom:4px}
+.chart .sub{font-size:16px;color:var(--ink-soft);margin:0 0 12px}
+.bars{display:flex;align-items:flex-end;gap:22px;height:230px;padding:10px 6px 0;border-bottom:3px solid var(--ink)}
+.bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.bar .fill{width:100%;max-width:110px;border:3px solid var(--ink);border-bottom:0;border-radius:14px 14px 0 0;background:var(--teal);height:0;transition:height 1s cubic-bezier(.2,.8,.2,1)}
+.bar.hot .fill{background:var(--orange)}
+.bar.soft .fill{background:var(--amber)}
+.bar .val{font-family:var(--display);font-size:24px;margin-bottom:4px}
+.xlab{display:flex;gap:22px;padding:8px 6px 0}
+.xlab span{flex:1;text-align:center;font-size:16px;line-height:1.4}
+.timeline-data{list-style:none;margin:0;padding:0}
+.timeline-data li{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:10px 0;border-bottom:2px dashed var(--line);font-size:17px}
+.timeline-data b{font-family:var(--display);font-weight:400;font-size:20px;color:var(--teal)}
+.callout{margin-top:22px;background:var(--amber-soft);border:3px dashed var(--amber);border-radius:22px;padding:18px 22px;font-size:18px}
+.callout h3{font-size:22px;margin-bottom:6px}
+.pair{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.fact{background:var(--paper);border:3px solid var(--line);border-radius:24px;padding:20px}
+.fact h3{font-size:24px;margin-bottom:8px;color:var(--teal)}
+.fact p,.fact li{font-size:18px}
+.fact ul{margin:.3em 0;padding-left:1.2em}
+.cost{width:100%;border-collapse:separate;border-spacing:0;font-size:18px;min-width:640px}
+.cost th,.cost td{padding:12px 14px;border-bottom:2px dashed var(--line);text-align:left;vertical-align:top}
+.cost thead th{background:var(--ink);color:var(--bg);font-weight:700}
+.cost thead th:first-child{border-radius:16px 0 0 0}
+.cost thead th:last-child{border-radius:0 16px 0 0}
+.cost tbody th{color:var(--teal);white-space:nowrap}
+.scroll{overflow-x:auto;background:var(--paper);border:3px solid var(--ink);border-radius:20px}
+.dept{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.dept div{background:var(--teal-soft);border-radius:22px;padding:16px 18px}
+.dept h3{font-size:22px;margin-bottom:4px}
+.dept p{font-size:17px;margin:0}
+.route{margin-top:20px;background:var(--paper);border-radius:22px;padding:18px 22px;border-left:8px solid var(--orange);font-size:19px}
+.route ol{margin:.4em 0 0;padding-left:1.3em}
+.faq details{background:var(--paper);border:3px solid var(--ink);border-radius:22px;margin-bottom:14px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:16px 56px 16px 20px;font-size:21px;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:var(--amber);display:grid;place-items:center;font-size:24px;line-height:34px;text-align:center}
+.faq details[open] summary::after{content:"−";background:var(--teal);color:#fff}
+.faq .body{padding:0 22px 18px;font-size:18px}
+.faq .myth{display:inline-block;background:var(--orange-soft);border-radius:8px;padding:0 8px;margin-right:6px;font-size:16px;font-weight:700}
+.faq .body strong{color:var(--teal)}
+.world{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.country{background:var(--paper);border:3px solid var(--ink);border-radius:26px;padding:22px;position:relative}
+.country .flag{font-family:var(--display);display:inline-block;background:var(--ink);color:var(--bg);border-radius:12px;padding:2px 14px;font-size:20px;margin-bottom:10px}
+.country h3{font-size:24px;margin-bottom:8px}
+.country p,.country li{font-size:18px}
+.country ul{padding-left:1.2em;margin:.3em 0}
+.lessons{margin-top:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.lessons div{background:var(--teal);color:#fff;border-radius:22px;padding:18px}
+.lessons h3{font-size:22px;margin-bottom:6px}
+.lessons p{font-size:17px;margin:0}
+.refs a{word-break:break-all}
+@media (max-width:900px){
+  .chart-grid,.pair,.dept,.world{grid-template-columns:1fr}
+  .lessons{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){.lessons{grid-template-columns:1fr}.bars{gap:12px}.xlab{gap:12px}}
+@media (max-width:620px){
+  .cost{min-width:0}
+  .cost thead{display:none}
+  .cost tr{display:block;padding:12px 14px;border-bottom:3px dashed var(--line)}
+  .cost tbody th,.cost td{display:block;border:0;padding:4px 0;white-space:normal}
+  .cost tbody th{font-size:21px}
+  .cost td::before{content:attr(data-label);display:inline-block;background:var(--amber-soft);border-radius:8px;padding:0 8px;margin-right:8px;font-weight:700;font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="頁面導覽">
+  <div class="wrap">
+    <span class="brand">無管好食光</span>
+    <div class="chips">
+      <a href="#quiz">打破迷思</a>
+      <a href="#compare">三種選擇</a>
+      <a href="#peg">胃造口怎麼做</a>
+      <a href="#cost">科別與費用</a>
+      <a href="#faq">常見擔心</a>
+      <a href="#numbers">現況與問題</a>
+      <a href="#research">研究怎麼說</a>
+      <a href="#timeline">行動時間表</a>
+      <a href="#world">借鏡國外</a>
+      <a href="#ask">問醫師這樣問</a>
+      <a href="#helper">討論小幫手</a>
+      <a href="#prepare">預先準備</a>
+    </div>
+    <button class="theme-btn" id="themeBtn" aria-label="切換深淺色">◐</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">給家屬與長輩的進食指南</span>
+      <h1>鼻子上的管子，<span class="line2">不一定要一直掛著</span></h1>
+      <p class="lead">插上鼻胃管，常常是為了度過一段困難的時期。重要的是插上之後的每一步：什麼時候再評估吞嚥、能不能練回用嘴巴吃、需要長期灌食時還有沒有更舒服的選擇。</p>
+      <p class="lead">這一頁先從 10 題小測驗打破常見迷思開始，再認識三種進食方式、了解胃造口，接著看台灣的現況與研究，最後是行動時間表、借鏡國外，以及你可以怎麼開口和預先準備。</p>
+    </div>
+    <div class="stage" id="stage">
+      <svg viewBox="0 0 320 300" role="img" aria-labelledby="faceTitle">
+        <title id="faceTitle">一位插著鼻胃管的阿嬤，按下按鈕後管子移除，露出笑容並端起一碗飯</title>
+        <circle cx="160" cy="150" r="118" fill="var(--teal-soft)"/>
+        <!-- hair -->
+        <circle cx="160" cy="58" r="30" fill="var(--hair)" stroke="var(--ink)" stroke-width="4"/>
+        <path d="M78 140 C70 70 250 70 242 140 C236 100 84 100 78 140Z" fill="var(--hair)" stroke="var(--ink)" stroke-width="4"/>
+        <!-- face -->
+        <ellipse cx="160" cy="155" rx="80" ry="84" fill="var(--skin)" stroke="var(--ink)" stroke-width="4"/>
+        <path d="M84 132 C100 96 220 96 236 132 C210 108 110 108 84 132Z" fill="var(--hair)" stroke="var(--ink)" stroke-width="4"/>
+        <!-- glasses -->
+        <circle cx="130" cy="146" r="19" fill="none" stroke="var(--ink)" stroke-width="4"/>
+        <circle cx="190" cy="146" r="19" fill="none" stroke="var(--ink)" stroke-width="4"/>
+        <path d="M149 146 H171" stroke="var(--ink)" stroke-width="4"/>
+        <circle cx="130" cy="148" r="5" fill="var(--ink)"/>
+        <circle cx="190" cy="148" r="5" fill="var(--ink)"/>
+        <ellipse cx="112" cy="182" rx="13" ry="8" fill="var(--blush)" opacity=".75"/>
+        <ellipse cx="208" cy="182" rx="13" ry="8" fill="var(--blush)" opacity=".75"/>
+        <!-- nose -->
+        <path d="M160 158 C152 176 150 180 160 182" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+        <!-- mouths -->
+        <path class="mouth-sad" d="M143 205 Q160 199 177 205" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+        <path class="mouth-happy" d="M138 198 Q160 226 182 198 Q160 210 138 198Z" fill="var(--orange)" stroke="var(--ink)" stroke-width="4" stroke-linejoin="round"/>
+        <!-- tube -->
+        <path class="tube" d="M156 180 C150 192 176 190 196 186 C230 180 250 196 262 222 C272 244 290 262 318 270" fill="none" stroke="var(--orange)" stroke-width="7" stroke-linecap="round"/>
+        <rect class="tape" x="184" y="176" width="26" height="18" rx="4" fill="var(--amber)" stroke="var(--ink)" stroke-width="3" transform="rotate(-8 197 185)"/>
+        <!-- bowl -->
+        <g class="bowl">
+          <path d="M226 246 H300 C298 276 276 290 263 290 C250 290 228 276 226 246Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="4"/>
+          <path d="M232 246 C240 228 286 228 294 246Z" fill="#FFFFFF" stroke="var(--ink)" stroke-width="3"/>
+          <path d="M244 222 c-6 -8 6 -12 0 -20 M262 218 c-6 -8 6 -12 0 -20 M280 222 c-6 -8 6 -12 0 -20" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M226 262 H300" stroke="var(--orange)" stroke-width="4"/>
+        </g>
+        <!-- sparkles -->
+        <path class="spark" d="M58 70 l6 14 14 6 -14 6 -6 14 -6 -14 -14 -6 14 -6z" fill="var(--amber)"/>
+        <path class="spark" d="M268 60 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" fill="var(--orange)"/>
+        <path class="spark" d="M40 210 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4z" fill="var(--teal)"/>
+      </svg>
+      <p class="caption" id="caption" aria-live="polite">吞嚥練起來，才有機會拿掉管子</p>
+      <button class="big-btn" id="trainBtn">陪阿嬤練吞嚥</button>
+      <a class="big-btn alt" href="#quiz" style="width:100%;margin-top:10px;text-decoration:none">先來 10 題小測驗</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ quiz ============ -->
+<section class="block" id="quiz">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第一步：先打破迷思</span>
+      <h2>關於鼻胃管和胃造口，你聽過的說法是真的嗎？</h2>
+      <p>先玩 10 題 O X，很多「不能拔、要開大刀、不能洗澡」的印象，答案可能和你想的不一樣。</p>
+    </div>
+    <div class="quiz" id="quizBox"></div>
+    <p class="score" id="score" aria-live="polite"></p>
+  </div>
+</section>
+
+
+<!-- ============ 三種方式 ============ -->
+<section class="block" id="compare">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第二步：認識三種選擇</span>
+      <h2>鼻胃管、胃造口、由口進食，差在哪裡？</h2>
+      <p>點選上方按鈕，可以把一種方式單獨放大來看。</p>
+    </div>
+    
+    <div class="card" style="margin-bottom:26px;padding:18px 22px">
+      <svg viewBox="0 0 900 400" role="img" aria-label="鼻胃管與胃造口的位置示意圖" style="width:100%;height:auto;display:block">
+        <defs><style>.lb{font-family:var(--body);font-size:24px;fill:var(--ink);font-weight:700}.sm{font-family:var(--body);font-size:18px;fill:var(--ink-soft)}</style></defs>
+        <g transform="translate(60,10)">
+          <text class="lb" x="150" y="26" text-anchor="middle">鼻胃管</text>
+          <circle cx="150" cy="92" r="44" fill="var(--skin)" stroke="var(--ink)" stroke-width="4"/>
+          <path d="M132 134 L132 150 C96 158 72 190 72 240 L72 330 L228 330 L228 240 C228 190 204 158 168 150 L168 134" fill="var(--teal-soft)" stroke="var(--ink)" stroke-width="4"/>
+          <path d="M150 150 L150 215" stroke="var(--line)" stroke-width="10" stroke-linecap="round"/>
+          <path d="M150 212 C118 206 100 226 104 252 C108 278 140 292 170 282 C200 272 204 236 176 222 C166 216 158 214 150 212 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+          <path d="M138 100 C132 104 124 108 118 112 M138 100 C150 118 152 150 152 180 C152 210 150 232 158 250" fill="none" stroke="var(--orange)" stroke-width="7" stroke-linecap="round"/>
+          <text class="sm" x="150" y="368" text-anchor="middle">從鼻孔經喉嚨、食道到胃，喉嚨有管子</text>
+        </g>
+        <g transform="translate(540,10)">
+          <text class="lb" x="150" y="26" text-anchor="middle">胃造口</text>
+          <circle cx="150" cy="92" r="44" fill="var(--skin)" stroke="var(--ink)" stroke-width="4"/>
+          <path d="M132 134 L132 150 C96 158 72 190 72 240 L72 330 L228 330 L228 240 C228 190 204 158 168 150 L168 134" fill="var(--teal-soft)" stroke="var(--ink)" stroke-width="4"/>
+          <path d="M150 150 L150 215" stroke="var(--line)" stroke-width="10" stroke-linecap="round"/>
+          <path d="M150 212 C118 206 100 226 104 252 C108 278 140 292 170 282 C200 272 204 236 176 222 C166 216 158 214 150 212 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/>
+          <circle cx="190" cy="250" r="8" fill="var(--orange)" stroke="var(--ink)" stroke-width="3"/>
+          <path d="M190 250 C215 250 232 240 250 232 C262 227 270 226 282 226" fill="none" stroke="var(--teal)" stroke-width="7" stroke-linecap="round"/>
+          <text class="sm" x="150" y="368" text-anchor="middle">腹部小開口直接通到胃，喉嚨淨空</text>
+        </g>
+      </svg>
+    </div>
+    <div class="switch" role="tablist" aria-label="選擇進食方式">
+      <button role="tab" aria-selected="true" data-f="all">全部比較</button>
+      <button role="tab" aria-selected="false" data-f="ng">鼻胃管</button>
+      <button role="tab" aria-selected="false" data-f="peg">胃造口</button>
+      <button role="tab" aria-selected="false" data-f="oral">由口進食</button>
+    </div>
+    <div class="compare" id="compareGrid">
+      <article class="way" data-k="ng">
+        <h3><svg class="icon" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="var(--orange-soft)"/><path d="M24 20 C20 30 22 34 30 34 C40 34 44 40 46 50" fill="none" stroke="var(--orange)" stroke-width="4" stroke-linecap="round"/><circle cx="22" cy="20" r="3" fill="var(--ink)"/></svg>鼻胃管</h3>
+        <dl>
+          <dt>放在哪裡</dt><dd>從鼻孔經過喉嚨、食道，進到胃。</dd>
+          <dt>適合情況</dt><dd>短期需要灌食，例如急性中風、手術後、暫時無法安全吞嚥。歐洲臨床營養學會建議使用約 4 週以內。</dd>
+          <dt>生活感受</dt><dd>管子在臉上很明顯，喉嚨常有異物感，有些長輩會想拔管，因而被約束雙手。</dd>
+          <dt>更換</dt><dd>健保給付的 PVC 管約 1～2 週換一次；矽質管約一個月換一次（依材質與醫囑），每次都要重新從鼻子放入。</dd>
+          <dt>練吞嚥</dt><dd>管子經過喉嚨，會讓吞嚥訓練比較不順。</dd>
+        </dl>
+      </article>
+      <article class="way" data-k="peg">
+        <h3><svg class="icon" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="var(--teal-soft)"/><ellipse cx="27" cy="32" rx="14" ry="11" fill="none" stroke="var(--teal)" stroke-width="4"/><circle cx="31" cy="32" r="3.5" fill="var(--orange)"/><path d="M31 32 C38 30 42 24 46 16" fill="none" stroke="var(--orange)" stroke-width="3.5" stroke-linecap="round"/></svg>胃造口</h3>
+        <dl>
+          <dt>放在哪裡</dt><dd>在左上腹做一個通到胃的小開口，灌食管從腹部接出來。</dd>
+          <dt>適合情況</dt><dd>預期需要灌食超過約 4 週的人。最常見的是經皮內視鏡胃造口，健保自民國 98 年 11 月起給付。</dd>
+          <dt>生活感受</dt><dd>臉上沒有管子，衣服可以遮住，喉嚨沒有異物感，也比較不容易被拉扯脫落。</dd>
+          <dt>更換</dt><dd>約半年到一年更換一次，在門診內視鏡室進行，不需要住院。</dd>
+          <dt>練吞嚥</dt><dd>喉嚨是淨空的，可以一邊灌食、一邊練習用嘴巴吃。吞嚥進步後，胃造口也可以移除。</dd>
+        </dl>
+      </article>
+      <article class="way" data-k="oral">
+        <h3><svg class="icon" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="25" fill="var(--amber-soft)"/><path d="M12 28 H42 C41 40 34 46 27 46 C20 46 13 40 12 28Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/><path d="M20 22 c-3 -4 3 -6 0 -10 M28 20 c-3 -4 3 -6 0 -10 M36 22 c-3 -4 3 -6 0 -10" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round"/></svg>由口進食</h3>
+        <dl>
+          <dt>是什麼</dt><dd>經過吞嚥評估與訓練後，用調整過的食物質地、姿勢與餐具，安全地用嘴巴吃。</dd>
+          <dt>適合情況</dt><dd>吞嚥功能有進步空間的人，例如中風恢復期、手術後、長期臥床後的退化。</dd>
+          <dt>舒適進食</dt><dd>生命末期或極重度失智時，有些家庭會選擇「舒適進食」：少量、慢慢餵，以享受味道與陪伴為主。歐洲指引不建議末期失智者使用管灌。</dd>
+          <dt>誰來協助</dt><dd>醫師、語言治療師、職能治療師、營養師與照顧者一起合作。</dd>
+          <dt>重點</dt><dd>這是每一個插管的人都值得被評估的方向。</dd>
+        </dl>
+      </article>
+    </div>
+    <p class="aside-msg">研究怎麼說：一篇整合 11 個隨機對照試驗、共 735 位病人的系統性回顧發現，鼻胃管組的「灌食失敗」（中斷、阻塞、滑脫）比較多，兩組的死亡率與整體併發症沒有差異，而胃造口組的生活品質較好。</p>
+  </div>
+</section>
+
+
+<!-- ============ 胃造口怎麼做 ============ -->
+<section class="block" id="peg">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第三步：了解胃造口</span>
+      <h2>從評估到回家，大概會經歷這些</h2>
+      <p>以最常見的經皮內視鏡胃造口為例，實際流程依各醫院而定。</p>
+    </div>
+    <div class="pair">
+      <div class="fact">
+        <h3>做之前</h3>
+        <ul>
+          <li>醫師評估病況、預計灌食多久、腸胃功能與吞嚥恢復的機會。</li>
+          <li>說明風險並簽同意書。</li>
+          <li>術前需要空腹約 6～8 小時。</li>
+        </ul>
+      </div>
+      <div class="fact">
+        <h3>過程中</h3>
+        <ul>
+          <li>由胃鏡進入胃部定位，再從腹部放入灌食管。</li>
+          <li>操作時間約 15～30 分鐘。</li>
+          <li>多數不需要開腹。胃鏡無法通過時，可改由放射科在影像導引下放置。</li>
+        </ul>
+      </div>
+      <div class="fact">
+        <h3>做完以後</h3>
+        <ul>
+          <li>第一次造口通常需住院約 3～7 天，觀察並學習照顧方法。</li>
+          <li>開始灌食的時間依醫院流程，從術後數小時到約三天不等。</li>
+          <li>傷口每天換藥約 7～14 天，穩定後就不用再換藥。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="route">
+      <strong>管子意外滑脫時：</strong>先用乾淨紗布蓋住造口，<strong>帶著原本的管子</strong>盡快就醫。造口通道約在 4～6 小時內就會開始縮小，越早處理越容易重新放回。
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 科別與費用 ============ -->
+<section class="block" id="cost">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第三步：科別與費用</span>
+      <h2>要掛哪一科？要花多少錢？多久換一次？</h2>
+    </div>
+
+    <div class="dept">
+      <div><h3>胃腸肝膽科</h3><p>又稱消化內科，是最常執行經皮內視鏡胃造口與換管的科別。</p></div>
+      <div><h3>一般外科</h3><p>部分醫院由外科執行，或用於需要手術方式放置的情況。</p></div>
+      <div><h3>放射科</h3><p>胃鏡無法通過時（例如頭頸部腫瘤），可在影像導引下放置胃造口。</p></div>
+    </div>
+
+    <div class="route">
+      <strong>原本看復健科或神經內科，需要轉科嗎？</strong>不需要換掉原本的醫師。復健與神經疾病的追蹤照舊，只是「做胃造口」這件事由胃腸肝膽科執行。
+      <ol>
+        <li><strong>住院中：</strong>請主治醫師「照會」胃腸肝膽科，不用自己另外掛號。</li>
+        <li><strong>門診中：</strong>請原本的醫師開立轉診單，再掛胃腸肝膽科。持轉診單就醫，門診部分負擔通常比較低。</li>
+        <li><strong>在長照機構或居家：</strong>可以請居家醫師、居家護理師或機構合作醫師協助轉介。</li>
+      </ol>
+    </div>
+
+    <h3 style="font-size:26px;margin:30px 0 12px">費用與換管比較</h3>
+    <div class="scroll">
+      <table class="cost">
+        <thead><tr><th>項目</th><th>鼻胃管</th><th>胃造口</th></tr></thead>
+        <tbody>
+          <tr><th>放置費用</th><td>健保給付，可由居家護理師到府放置。</td><td>健保自民國 98 年 11 月起給付經皮內視鏡胃造口術，包含技術與管路材料。</td></tr>
+          <tr><th>需要自付的部分</th><td>想改用較耐用的矽質管，每支自費約 150～200 元；居家護理到府換管另付車資約 200～300 元。</td><td>住院期間的健保部分負擔（急性病房 30 天內為 10%，有上限）、伙食費；入住非健保病房要付病房差額。選擇自費香菇頭型管材約 6,500 元。</td></tr>
+          <tr><th>多久換一次</th><td>PVC 管約 1～2 週一次；矽質管約一個月一次（依材質與醫囑）。</td><td>約半年到一年一次，由醫師依管型評估。</td></tr>
+          <tr><th>換管費用</th><td>健保給付 PVC 管；居家護理到府換管依長照或居家護理規定收費。</td><td>健保每半年給付一次換管。若半年內因病況或管路髒污需要提早換，自費約 1,500～8,000 元。</td></tr>
+          <tr><th>換管地點</th><td>居家護理師到府，或到醫院、急診處理。</td><td>門診內視鏡室，換完即可回家，不需住院。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="font-size:26px;margin:30px 0 12px">一年大略要花多少？</h3>
+    <div class="pair">
+      <div class="fact">
+        <h3 style="color:var(--orange)">鼻胃管</h3>
+        <ul>
+          <li>矽質鼻胃管每支自費約 150～200 元。</li>
+          <li>居家護理師每月到府換管，家屬另付車資每次約 200～300 元。</li>
+          <li><strong>一年大略約 5,000～10,000 元</strong>，滑脫重插次數越多越高。</li>
+        </ul>
+      </div>
+      <div class="fact">
+        <h3>胃造口：第一次</h3>
+        <ul>
+          <li>手術與健保水球型管材由健保給付。</li>
+          <li>自付住院部分負擔與伙食費，依住院天數與病房而定。</li>
+          <li>選擇自費的香菇頭型管材，材料費約 6,500 元。</li>
+          <li><strong>第一次大略約數千元到 1 萬多元</strong>。</li>
+        </ul>
+      </div>
+      <div class="fact">
+        <h3>胃造口：之後每年</h3>
+        <ul>
+          <li>健保每半年給付一次換管，在門診完成。</li>
+          <li>半年內因病況或管路髒污提早換管，自費約 1,500～8,000 元。</li>
+          <li><strong>按時換管時，多半只需門診部分負擔</strong>，另加日常清潔用品。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:10px">以上為依醫院公開資料整理的大略範圍，各醫院收費與流程不同，實際金額請以就醫醫院說明為準。經濟有困難時，可以詢問醫院社工室的醫療補助資源。</p>
+  </div>
+</section>
+
+
+<!-- ============ FAQ ============ -->
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第三步：常見擔心</span>
+      <h2>「胃要穿一個洞」聽起來很可怕？一題一題來看</h2>
+      <p>點開每一題，看看擔心的地方是否真的會發生，以及照顧上要注意什麼。</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary><span class="myth">擔心</span>在胃上穿洞，是不是很大的手術？</summary>
+        <div class="body"><p>經皮內視鏡胃造口是用胃鏡在胃裡定位，再從腹部做一個小開口放入灌食管，操作時間約 15～30 分鐘，<strong>多數不需要開腹</strong>。這項技術從 1980 年代發展至今已經很成熟，在歐美是長期灌食的主要方式。</p></div>
+      </details>
+      <details>
+        <summary><span class="myth">擔心</span>傷口會不會一直發炎、好不了？</summary>
+        <div class="body"><p>剛做完時，傷口每天換藥約 7～14 天，<strong>兩週後若沒有異常分泌物或滲漏，就不用再換藥</strong>，之後每天清潔即可。</p><p>研究顯示，造口周圍感染是最常見的輕微併發症，不同研究的發生率約在 5% 到 30% 之間；醫院會在術前做好感染預防，研究也發現有做預防的人感染比例明顯較低。嚴重併發症（例如出血、腹膜炎）約在 1% 到 4%。</p></div>
+      </details>
+      <details>
+        <summary><span class="myth">擔心</span>造口會不會一直感染？</summary>
+        <div class="body"><p>造口癒合後，胃部的感染並不常見。照顧重點是：</p><ul><li>每天清潔造口周圍皮膚並擦乾。</li><li>每天看一看：有沒有紅、腫、熱、痛、化膿、異味或胃液滲出。</li><li>依醫護人員指示確認管子的刻度位置，避免太緊或太鬆。</li></ul><p>出現持續紅腫、疼痛或異常滲液時，盡快聯絡醫療團隊。</p></div>
+      </details>
+      <details>
+        <summary><span class="myth">擔心</span>那洗澡怎麼辦？碰到水會不會發炎？</summary>
+        <div class="body"><p><strong>術後一週內</strong>保持傷口乾燥，可以用擦澡的方式清潔身體。</p><p><strong>約一週後</strong>，經醫護人員評估傷口穩定，就可以開始洗澡，建議採<strong>淋浴</strong>。洗澡時可以用肥皂和溫水順便清洗造口周圍皮膚，洗完立刻把造口擦乾，避免周圍皮膚長時間潮濕。</p><p>水本身不是問題，「洗完沒擦乾、一直悶濕」才是皮膚出狀況的常見原因。泡澡、泡溫泉、游泳等，請先問醫療團隊。</p></div>
+      </details>
+      <details>
+        <summary><span class="myth">擔心</span>做了胃造口，生活會不會更麻煩？</summary>
+        <div class="body"><p>兩種方式都需要照顧，只是重點不同：</p><ul><li><strong>鼻胃管：</strong>每天要換固定鼻子的膠布，管子容易被咳出或拔出，每兩週到一個月要重新從鼻子插一次。</li><li><strong>胃造口：</strong>每天清潔造口、觀察皮膚；灌食和給藥前後用溫水沖管，預防阻塞；半年到一年到醫院換一次管。</li></ul><p>許多家屬回饋，胃造口外觀看不出來、不用反覆插管，長輩外出和社交也比較自在。</p></div>
+      </details>
+      <details>
+        <summary><span class="myth">擔心</span>做了胃造口，就再也不能用嘴巴吃？</summary>
+        <div class="body"><p>不會。胃造口讓喉嚨淨空，<strong>反而更方便練習吞嚥</strong>。可以一邊靠胃造口維持營養，一邊在語言治療師指導下練習由口進食。吞嚥恢復後，經醫師評估就可以移除胃造口，開口會慢慢閉合。</p></div>
+      </details>
+      <details>
+        <summary><span class="myth">擔心</span>改胃造口，就能避免吸入性肺炎嗎？</summary>
+        <div class="body"><p>不能完全避免。口水、胃裡的東西仍可能嗆入氣管。不論用哪一種管灌方式，都要做到：每天口腔清潔、灌食時與灌食後維持半坐姿、依醫囑控制灌食速度與份量。</p></div>
+      </details>
+      <details>
+        <summary><span class="myth">擔心</span>胃造口是不是延長生命的「維生管」？</summary>
+        <div class="body"><p>這要看病況。對中風恢復期、頭頸癌治療中的人，胃造口是幫助度過難關、爭取復健時間的工具。對於<strong>末期失智</strong>的長者，歐洲臨床營養學會的指引不建議管灌，美國相關學會也建議以小心的手餵取代；這時候更重要的是討論照顧目標與舒適。</p><p>做或不做，都應該是了解資訊後，和醫療團隊、家人一起做的決定。</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 數據 ============ -->
+<section class="block" id="numbers">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第四步：看清楚現況</span>
+      <h2>先分清楚三個不同的數字</h2>
+      <p>新聞裡的「21 萬」「25 萬」「40 萬」常被混在一起講。它們算的對象不一樣，分開看才不會誤會。</p>
+    </div>
+
+
+    <div class="card" style="margin-bottom:26px;padding:18px 22px">
+      <svg viewBox="0 0 900 300" role="img" aria-label="三個數字的關係示意圖" style="width:100%;height:auto;display:block">
+        <defs><style>.f1{font-family:var(--display);font-size:34px;fill:#fff}.f2{font-family:var(--body);font-size:19px;fill:var(--ink)}.f3{font-family:var(--body);font-size:17px;fill:var(--ink-soft)}</style></defs>
+        <rect x="40" y="30" width="820" height="70" rx="18" fill="var(--teal)"/>
+        <text class="f1" x="450" y="77" text-anchor="middle">每年插過鼻胃管：約 21～27 萬人</text>
+        <rect x="200" y="125" width="500" height="70" rx="18" fill="var(--orange)"/>
+        <text class="f1" x="450" y="172" text-anchor="middle">超過 3 個月：約 7.9 萬人</text>
+        <rect x="40" y="220" width="820" height="60" rx="18" fill="var(--amber-soft)" stroke="var(--amber)" stroke-width="3"/>
+        <text class="f2" x="450" y="247" text-anchor="middle" font-weight="700">再加上住宿機構、護理之家等住民 → 靠管灌生活的總人口約 40 萬人</text>
+        <text class="f3" x="450" y="271" text-anchor="middle">三個數字來源與年份不同，分開看才不會誤會</text>
+        <path d="M450 100 L450 125" stroke="var(--ink)" stroke-width="3" marker-end="url(#ar)"/>
+        <path d="M450 195 L450 220" stroke="var(--ink)" stroke-width="3"/>
+      </svg>
+    </div>
+    <div class="pair">
+      <div class="fact" style="border-color:var(--teal)">
+        <h3>每年插過鼻胃管的人</h3>
+        <p style="font-family:var(--display);font-size:44px;line-height:1.1;color:var(--orange);margin:0">約 21～27 萬人</p>
+        <p>健保署每年申報放置鼻胃管的人數，包括住院短期使用。2021 年約 27 萬、2023 年約 21 萬、2024 年約 25 萬（含機構約 3 萬人）。</p>
+      </div>
+      <div class="fact" style="border-color:var(--orange)">
+        <h3>其中變成長期的人</h3>
+        <p style="font-family:var(--display);font-size:44px;line-height:1.1;color:var(--orange);margin:0">約 7.9 萬人</p>
+        <p>留置鼻胃管超過 3 個月的人數（2021 年健保署統計）。這一群人才是「長期插管」的核心問題。</p>
+      </div>
+      <div class="fact" style="border-color:var(--amber)">
+        <h3>靠管灌生活的總人口</h3>
+        <p style="font-family:var(--display);font-size:44px;line-height:1.1;color:var(--orange);margin:0">約 40 萬人</p>
+        <p>衛福部 2024 年統計，加上住宿機構、護理之家等住民。護理之家住民約 5 成、住宿機構住民約 3 成 7 留置鼻胃管。</p>
+      </div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="chart">
+        <h3>每年健保申報放置鼻胃管的人數</h3>
+        <p class="sub">健保署統計，2022 年未公開</p>
+        <div class="bars" data-max="30">
+          <div class="bar soft"><span class="val">27 萬</span><div class="fill" data-v="27"></div></div>
+          <div class="bar"><span class="val">21 萬</span><div class="fill" data-v="21"></div></div>
+          <div class="bar hot"><span class="val">25 萬</span><div class="fill" data-v="25"></div></div>
+        </div>
+        <div class="xlab"><span>2021 年</span><span>2023 年</span><span>2024 年</span></div>
+        <p class="sub" style="margin-top:12px">年度之間有起伏，但沒有看到明顯下降的趨勢。</p>
+      </div>
+    </div>
+
+    <div class="head" style="margin-top:44px">
+      <span class="tag">第四步：找出問題在哪</span>
+      <h2>插上之後，很少人被重新評估</h2>
+      <p>把長期插管的人追蹤下去，會看到真正的缺口不是「沒有技術」，而是「沒有下一步」。</p>
+    </div>
+
+    <div class="notes">
+      <div class="note"><b>13%</b><span>長期插鼻胃管的人，接受過復健治療</span><small>台灣健保百萬抽樣資料研究（2022 年發表）</small></div>
+      <div class="note"><b>0.62%</b><span>長期插鼻胃管的人，後來改做胃造口</span><small>同一篇研究；資料期間較早</small></div>
+      <div class="note"><b>249 件</b><span>2024 年申報「成功移除鼻胃管」獎勵的案件</span><small>2022 年 98 件、2023 年 232 件；只算有申報獎勵的個案</small></div>
+      <div class="note"><b>37%</b><span>住宿機構住民留置鼻胃管</span><small>約 9.96 萬人中有 3.72 萬人（2025 年衛福部）</small></div>
+    </div>
+
+    <div class="callout">
+      <h3>這些數字合起來說了什麼</h3>
+      <p style="margin:0">每年有 20 多萬人插過鼻胃管，其中約 8 萬人超過 3 個月；長期插管的人只有約一成接受復健、不到 1% 改做胃造口；每年成功移除並申報獎勵的只有兩百多件。所以這一頁的重點，不是「大家都該改胃造口」，而是<strong>每一條管子插上後，都要有再評估的時間點</strong>：能練回來的練回來，需要長期灌食的換更舒服的方式，末期的討論舒適照顧。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 研究 ============ -->
+<section class="block" id="research">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第五步：看研究怎麼說</span>
+      <h2>四個關鍵問題，研究給的答案</h2>
+      <p>每個問題先給一句結論，再列出近年的系統性回顧、統合分析與全國資料庫研究，並附上研究的範圍與限制。</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary><span class="myth">問題一</span>需要長期灌食時，鼻胃管和胃造口哪個比較好？</summary>
+        <div class="body">
+          <p><strong>結論：需要灌食超過約 4 週時，胃造口的生活品質較好、灌食失敗較少，肺炎風險可能較低；但它不是萬靈丹，死亡率沒有明顯差異。</strong></p>
+          <ul>
+            <li><b>Cochrane 系統性回顧（11 個隨機試驗、735 人）：</b>鼻胃管組灌食失敗（中斷、阻塞、滑脫）較多，胃造口組生活品質較好，兩組死亡率與整體併發症沒有差異。</li>
+            <li><b>2026 年統合分析（中風後吞嚥困難，10 篇研究、1,416 人）：</b>胃造口組肺炎風險較低，營養狀況可能較好；死亡率在整體分析中較低，但只看隨機試驗時差異不明顯。</li>
+            <li><b>2024 年統合分析（22 篇研究）：</b>做了胃造口的中風病人仍是吸入性肺炎的高風險族群，住院死亡率也不低。研究者建議找出最適合的對象與時機。</li>
+            <li><b>2025 年美國大型回溯世代：</b>觀察到胃造口病人長期吸入性肺炎較多，可能與病況較重的人較常被選擇做胃造口有關。</li>
+          </ul>
+          <p class="fine">怎麼解讀：不同設計的研究結果並不一致。胃造口的好處主要在舒適與生活品質，肺炎預防仍要靠口腔清潔、擺位與吞嚥訓練。</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="myth">問題二</span>末期或重度失智的長輩，插管有幫助嗎？</summary>
+        <div class="body">
+          <p><strong>結論：目前沒有證據顯示管灌能延長重度失智者的存活；小心手餵的存活率和鼻胃管相同，肺炎風險反而較低。</strong></p>
+          <ul>
+            <li><b>Cochrane 回顧（2021）：</b>找不到隨機試驗；觀察性研究中沒有明確證據顯示管灌能延長存活，也沒有研究評估生活品質，部分研究發現壓瘡增加。</li>
+            <li><b>香港前瞻性配對研究（2025）：</b>晚期失智者採用小心手餵，一年存活率和鼻胃管組沒有差異，鼻胃管組一年肺炎風險較高。2022 年香港另一篇研究結果相似，兩組一年存活率都約 36～37%。</li>
+            <li><b>台灣居家醫療研究（2020，169 人，平均約 86 歲）：</b>鼻胃管組的肺炎風險沒有比協助手餵組低，住院與死亡率也沒有明顯差異。</li>
+          </ul>
+          <p class="fine">研究範圍：香港研究對象多為住院病人；台灣研究為回溯性、樣本數不大。這也是歐洲與美國指引建議末期失智者以小心手餵為主的依據。</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="myth">問題三</span>為什麼要及早做吞嚥評估？</summary>
+        <div class="body">
+          <p><strong>結論：中風後約四成的人有吞嚥困難，肺炎與死亡風險約 4 倍；及早篩檢與吞嚥處置和較低的死亡率相關。</strong></p>
+          <ul>
+            <li><b>2022 年統合分析（42 篇研究、26,366 位急性中風病人）：</b>約 42% 有吞嚥困難，有吞嚥困難者肺炎風險約 4 倍、死亡風險約 4 倍。</li>
+            <li><b>奧地利全國中風登錄（2025，18 萬多人）：</b>在中重度中風病人中，吞嚥篩檢、語言治療等吞嚥處置與較低的死亡率相關。</li>
+          </ul>
+          <p class="fine">研究範圍：登錄資料為觀察性研究，只能看出相關，不能直接證明因果。</p>
+        </div>
+      </details>
+      <details>
+        <summary><span class="myth">問題四</span>台灣長期插鼻胃管的人，後來怎麼了？</summary>
+        <div class="body">
+          <p><strong>結論：長期插鼻胃管的人，只有約 13% 接受復健治療、0.62% 改做胃造口。</strong></p>
+          <ul>
+            <li><b>台灣健保百萬抽樣資料研究（2022 年發表）：</b>追蹤長期鼻胃管病人後發現上述比例，顯示吞嚥復健與再評估的機會仍有提升空間。</li>
+          </ul>
+          <p class="fine">研究範圍：抽樣資料期間較早，近年比例可能已有變化。台灣目前沒有公開的全國胃造口逐年統計。</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ timeline ============ -->
+<section class="block" id="timeline">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第六步：行動時間表</span>
+      <h2>一條鼻胃管，應該要有下一步</h2>
+      <p>每個人的病況不同，以下是可以和醫療團隊一起確認的時間點。</p>
+    </div>
+    <div class="timeline">
+      <div class="stop"><div class="dot">插管<br>當天</div><div><h3>先問清楚</h3><p>請醫師說明為什麼要插、預計放多久、什麼時候會再評估。</p></div></div>
+      <div class="stop"><div class="dot">第 1～2<br>週</div><div><h3>開始照顧口腔與吞嚥</h3><p>每天做好口腔清潔，請語言治療師做床邊吞嚥評估。</p></div></div>
+      <div class="stop"><div class="dot">約第<br>3 週</div><div><h3>關鍵評估點</h3><p>專家建議鼻胃管放滿約三週時安排吞嚥檢查，決定練回由口進食，或準備長期灌食方式。</p></div></div>
+      <div class="stop"><div class="dot">約<br>4 週</div><div><h3>討論胃造口</h3><p>歐洲指引建議預期灌食超過約 4 週時，改用胃造口。</p></div></div>
+      <div class="stop"><div class="dot">之後<br>定期</div><div><h3>持續再評估</h3><p>出院後持續吞嚥訓練，定期確認能不能減少灌食、恢復由口進食。</p></div></div>
+    </div>
+
+    <div class="card" style="margin-top:26px;padding:18px 22px">
+      <h3 style="font-size:24px;margin-bottom:8px">插管之後的決策流程</h3>
+      <svg viewBox="0 0 900 420" role="img" aria-label="插管之後的決策流程圖" style="width:100%;height:auto;display:block">
+        <defs><style>.bx{fill:var(--paper);stroke:var(--ink);stroke-width:3}.t{font-family:var(--body);font-size:19px;fill:var(--ink);font-weight:700}.ts{font-family:var(--body);font-size:16px;fill:var(--ink-soft)}.ln{stroke:var(--ink);stroke-width:3;fill:none}</style>
+        <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="var(--ink)"/></marker></defs>
+        <rect class="bx" x="330" y="20" width="240" height="56" rx="14"/><text class="t" x="450" y="54" text-anchor="middle">插上鼻胃管</text>
+        <path class="ln" d="M450 76 L450 110" marker-end="url(#ar)"/>
+        <rect x="290" y="110" width="320" height="64" rx="14" fill="var(--amber-soft)" stroke="var(--amber)" stroke-width="3"/><text class="t" x="450" y="137" text-anchor="middle">約第 3 週：吞嚥評估</text><text class="ts" x="450" y="161" text-anchor="middle">語言治療師評估，必要時吞嚥檢查</text>
+        <path class="ln" d="M450 174 L450 210"/><path class="ln" d="M150 210 L750 210"/>
+        <path class="ln" d="M150 210 L150 240" marker-end="url(#ar)"/><path class="ln" d="M450 210 L450 240" marker-end="url(#ar)"/><path class="ln" d="M750 210 L750 240" marker-end="url(#ar)"/>
+        <rect x="30" y="240" width="240" height="90" rx="14" fill="var(--teal-soft)" stroke="var(--teal)" stroke-width="3"/><text class="t" x="150" y="272" text-anchor="middle">吞嚥有進步空間</text><text class="ts" x="150" y="296" text-anchor="middle">持續吞嚥訓練</text><text class="ts" x="150" y="318" text-anchor="middle">目標：移除管子、由口進食</text>
+        <rect x="330" y="240" width="240" height="90" rx="14" fill="var(--orange-soft)" stroke="var(--orange)" stroke-width="3"/><text class="t" x="450" y="272" text-anchor="middle">預期灌食超過 4 週</text><text class="ts" x="450" y="296" text-anchor="middle">請醫師評估胃造口</text><text class="ts" x="450" y="318" text-anchor="middle">同時持續練吞嚥</text>
+        <rect x="630" y="240" width="240" height="90" rx="14" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/><text class="t" x="750" y="272" text-anchor="middle">末期或極重度失智</text><text class="ts" x="750" y="296" text-anchor="middle">討論照顧目標</text><text class="ts" x="750" y="318" text-anchor="middle">舒適進食、安寧共同照護</text>
+        <path class="ln" d="M150 330 L150 360 L750 360 L750 330"/><path class="ln" d="M450 330 L450 390" marker-end="url(#ar)"/>
+        <rect x="290" y="390" width="320" height="0"/>
+        <text class="t" x="450" y="412" text-anchor="middle">之後每 1～3 個月定期再評估</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ world ============ -->
+<section class="block" id="world">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第七步：借鏡國外</span>
+      <h2>台灣怎麼做？國外怎麼做？</h2>
+      <p>長期使用鼻胃管在東亞地區相對常見，各國也都經歷過觀念調整的過程。</p>
+    </div>
+    <div class="world">
+      <div class="country">
+        <span class="flag">台灣</span>
+        <h3>從給付開始，逐步走向移除與評估</h3>
+        <ul>
+          <li>民國 98 年起，健保給付經皮內視鏡胃造口術與每半年換管。</li>
+          <li>民國 111 年起，健保新增「成功移除長期留置鼻胃管並恢復經口進食」獎勵，每人 3,000 點。</li>
+          <li>住宿機構照顧品質獎勵計畫，把吞嚥及進食照顧技巧訓練列為指標。</li>
+          <li>2025 年，健保署表示將放寬移除獎勵為留置 1 個月以上，並納入住宿機構（是否已上路請以最新公告為準）；長照 3.0 也把協助移除鼻胃管列為重點。</li>
+          <li>多家醫院提供「醫病共享決策」輔助工具，協助家屬比較鼻胃管與胃造口。</li>
+        </ul>
+      </div>
+      <div class="country">
+        <span class="flag">歐洲</span>
+        <h3>用時間點把決策標準化</h3>
+        <ul>
+          <li>歐洲臨床營養學會建議：鼻胃管用於短期（約 4 週內），預期更久就改用胃造口。</li>
+          <li>老年人預期灌食超過 4 週，建議放置胃造口。</li>
+          <li>同一份老年指引也明確寫出：末期失智者不建議管灌。</li>
+        </ul>
+      </div>
+      <div class="country">
+        <span class="flag">美國</span>
+        <h3>研究證據加上家屬決策輔助</h3>
+        <ul>
+          <li>研究陸續顯示，晚期失智者使用餵食管沒有明顯好處，專業學會發表立場聲明，建議以小心的手餵為主。</li>
+          <li>晚期失智護理之家住民接受餵食管的比例，在 2014 年已降到約 6%，15 年間減少約一半。</li>
+          <li>北卡羅來納州 24 家護理之家的試驗中，家屬使用一份書面決策輔助工具後，知識提升、決策衝突降低，和醫療人員討論進食選擇的比例從 33% 提高到 46%，住民獲得吞嚥飲食的比例也較高。</li>
+        </ul>
+      </div>
+      <div class="country">
+        <span class="flag">日本</span>
+        <h3>曾經大量造口，再用制度修正</h3>
+        <ul>
+          <li>日本過去胃造口使用量很高，社會開始討論是否被過度使用。</li>
+          <li>2014 年調整給付：造口手術點數從 10,070 點降為 6,070 點，新增術前吞嚥檢查加算，並要求醫院有專任語言治療師、經口進食恢復率達 35% 以上。</li>
+          <li>目標是讓每一次造口前都先評估吞嚥、做完後積極訓練，讓更多人恢復由口進食。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>國外也有顧慮嗎？</h3>
+      <p style="margin:0">有，而且方向各有不同。美國與歐洲擔心的是「晚期失智者插管是否真的有幫助」，日本則是一度擔心「胃造口做太多」。它們改變的方式很一致：先有研究證據，再由專業學會訂出指引，接著用給付制度鼓勵評估與訓練，最後提供家屬看得懂的決策工具。</p>
+    </div>
+
+    <h3 style="font-size:26px;margin:30px 0 12px">台灣可以借鏡的四件事</h3>
+    <div class="lessons">
+      <div><h3>固定評估時間點</h3><p>插管約三週就安排吞嚥評估，讓每一條管子都有下一步。</p></div>
+      <div><h3>先評估再決定</h3><p>不論插管或造口，決定前都先做吞嚥評估，決定後持續訓練。</p></div>
+      <div><h3>家屬看得懂的工具</h3><p>用簡單的圖文與影片，說明每種選擇的好處與限制。</p></div>
+      <div><h3>及早說出意願</h3><p>透過預立醫療照護諮商，讓本人的想法在需要時被看見。</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ ask ============ -->
+<section class="block" id="ask">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第八步：開口問</span>
+      <h2>帶著這張問題卡去看診</h2>
+      <p>勾選你想問的問題，可以複製傳給家人，或列印帶去醫院。</p>
+    </div>
+    <div class="two">
+      <div class="card" id="qcard">
+        <h3>我想請教醫療團隊</h3>
+        <ul class="checks" id="checks"></ul>
+        <div class="row-btns">
+          <button class="big-btn alt" id="copyBtn">複製勾選的問題</button>
+          <button class="big-btn" id="printBtn">列印問題卡</button>
+        </div>
+        <div class="toast" id="toast" aria-live="polite"></div>
+      </div>
+      <div>
+        <h3 style="font-size:28px;margin-bottom:14px">說出口的方式</h3>
+        <div class="talk">
+          <div class="bubble"><b>跟醫師說</b>我們不是拒絕治療，是想知道這條管子接下來的計畫，什麼時候可以再評估吞嚥？</div>
+          <div class="bubble"><b>跟家人說</b>插管是為了先把營養顧好。我們一起問清楚下一步，才不會讓它一直放著。</div>
+          <div class="bubble"><b>跟長輩說</b>這條管子先幫你補營養，我們會陪你練吞嚥，目標是再用嘴巴吃你愛吃的東西。</div>
+          <div class="bubble"><b>家人擔心「胃要穿洞」時</b>胃造口是用胃鏡做的小開口，臉上不用掛管子，比較好練吞嚥，以後進步也可以拿掉。我們先聽醫師說明適不適合。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ helper ============ -->
+<section class="block" id="helper">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第八步：討論小幫手</span>
+      <h2>我們家的情況，可以先從哪裡談起？</h2>
+      <p>回答三個問題，整理出可以和醫療團隊討論的方向。</p>
+    </div>
+    <div class="helper">
+      <div class="hq" data-q="time">
+        <p>鼻胃管已經放了多久，或預計要放多久？</p>
+        <div class="opts"><button data-v="short">一個月以內</button><button data-v="mid">一到三個月</button><button data-v="long">三個月以上</button></div>
+      </div>
+      <div class="hq" data-q="aware">
+        <p>本人的清醒程度，能不能配合練習？</p>
+        <div class="opts"><button data-v="yes">可以配合</button><button data-v="some">有時可以</button><button data-v="no">很難配合</button></div>
+      </div>
+      <div class="hq" data-q="stage">
+        <p>目前比較接近哪一種情況？</p>
+        <div class="opts"><button data-v="recover">中風、手術或急病後的恢復期</button><button data-v="chronic">慢慢退化的疾病</button><button data-v="end">生命末期或極重度失智</button></div>
+      </div>
+      <div class="result" id="result" aria-live="polite"></div>
+      <p class="fine">這裡整理的是「可以提出來討論的方向」，不能取代醫師的診斷與建議。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ prepare ============ -->
+<section class="block" id="prepare">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">第九步：預先準備</span>
+      <h2>趁現在，替將來的自己說清楚</h2>
+      <p>依照《病人自主權利法》，在意識清楚的時候，可以事先寫下在特定臨床條件下，是否接受人工營養及流體餵養（包括鼻胃管）。</p>
+    </div>
+    <div class="path">
+      <div class="p"><span class="n">1</span><h3>先跟家人聊</h3><p>說說你重視的生活品質：能不能吃、能不能出門、不想要什麼。</p></div>
+      <div class="p"><span class="n">2</span><h3>預立醫療照護諮商</h3><p>到提供諮商的醫院掛號，和醫療團隊、家人一起討論。</p></div>
+      <div class="p"><span class="n">3</span><h3>簽署預立醫療決定</h3><p>完成見證或公證，並註記在健保卡上，醫療人員就能看到你的意願。</p></div>
+      <div class="p"><span class="n">4</span><h3>指定醫療委任代理人</h3><p>選一位最懂你的人，在你無法表達時替你說話。</p></div>
+    </div>
+    <div class="daily">
+      <div><h3>顧好口腔</h3><p>每天刷牙、清潔舌頭與假牙，口腔乾淨，吞嚥和肺部都更安心。</p></div>
+      <div><h3>多動嘴巴</h3><p>唱歌、說話、咀嚼、做嘴巴體操，都是在練習吞嚥用的肌肉。</p></div>
+      <div><h3>吃飯卡卡就要說</h3><p>吃飯常嗆到、吃很久、體重下降，早點找醫師或治療師評估。</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2 style="font-size:30px">需要協助時</h2>
+    <div class="hotline"><a href="tel:1966">長照專線 1966</a></div>
+    <p>出院後需要吞嚥或進食訓練，可以撥打 1966 申請長照評估，詢問專業服務（復能）是否能安排治療師到家協助。</p>
+    <div class="refs">
+      <p><strong>參考資料</strong></p>
+      <ol>
+        <li>衛生福利部（2022）。響應「無管人生」，健保新增移除長期留置鼻胃管之獎勵誘因。<a href="https://www.mohw.gov.tw/fp-16-68139-1.html">mohw.gov.tw</a></li>
+        <li>聯合報（2025）。獎勵鼻胃管移除，健保署：年底前放寬適用對象、納入長照住宿機構（2023 年鼻胃管人數、649 人達標）。<a href="https://udn.com/news/story/7266/8909202">udn.com</a></li>
+        <li>工商時報（2025）。移除鼻胃管計畫放寬適用對象、納住宿機構（2024 年約 25 萬人）。<a href="https://www.ctee.com.tw/news/20250731701304-431401">ctee.com.tw</a></li>
+        <li>中時新聞網（2025）。長照體系移除鼻胃管，衛福部：長照 3.0 將強化（65 歲以上比例、護理之家使用率）。<a href="https://www.chinatimes.com/realtimenews/20250115002980-260405">chinatimes.com</a></li>
+        <li>Ankecare 創新照顧（2025）。健保署長照機構住民成功移除鼻胃管獎勵（住宿機構 3.72 萬人）。<a href="https://www.ankecare.com/article/3860-2025-08-28-04-02-59">ankecare.com</a></li>
+        <li>聯合報（2025）。全國 40 萬人插鼻胃管，去年僅 249 人擺脫。<a href="https://udn.com/news/story/7266/8854737">udn.com</a></li>
+        <li>匯流新聞網（2022）。一年 7.9 萬人長期留置鼻胃管。<a href="https://cnews.com.tw/003220415a02/">cnews.com.tw</a></li>
+        <li>關鍵評論網。鼻胃管還是胃造口？（2012–2015 年住院病人鼻胃管人數、機構使用比例）。<a href="https://www.thenewslens.com/article/68633">thenewslens.com</a></li>
+        <li>臺北醫學大學附設醫院。醫病共享決策：長期放置鼻胃管之吞嚥異常病人的營養供應方式（費用、換管頻率、滑脫處理）。<a href="https://www.tmuh.org.tw/UploadFile/files/%E9%86%AB%E5%8B%99%E9%83%A8/%E9%86%AB%E7%97%85%E5%85%B1%E4%BA%AB%E6%B1%BA%E7%AD%96/15%E9%86%AB%E7%97%85%E5%85%B1%E4%BA%AB%E6%B1%BA%E7%AD%96SDM-%E9%95%B7%E6%9C%9F%E6%94%BE%E7%BD%AE%E9%BC%BB%E8%83%83%E7%AE%A1%E4%B9%8B%E5%90%9E%E5%9A%A5%E7%95%B0%E5%B8%B8%E7%97%85%E4%BA%BA%E7%9A%84%E7%87%9F%E9%A4%8A%E4%BE%9B%E6%87%89%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B%E9%81%B8%E6%93%87.pdf">tmuh.org.tw</a></li>
+        <li>元氣網。胃造口管好處多，不易滑脫、不需常換（操作時間、住院天數、健保給付）。<a href="https://health.udn.com/health/story/6631/3488086">health.udn.com</a></li>
+        <li>奇美醫院檢查室。經皮內視鏡胃造口術（換藥天數、換管不需住院）。<a href="https://sub.chimei.org.tw/57301/index.php/2017-03-14-06-36-50">chimei.org.tw</a></li>
+        <li>中國醫藥大學附設醫院。內視鏡胃造口術後之居家護理（洗澡與清潔）。<a href="https://www.cmuh.cmu.edu.tw/HealthEdus/Detail?no=4752">cmuh.cmu.edu.tw</a></li>
+        <li>臺北榮民總醫院。經皮內視鏡胃造口之照護。<a href="https://ihealth.vghtpe.gov.tw/media/552">ihealth.vghtpe.gov.tw</a></li>
+        <li>Cochrane 系統性回顧。吞嚥困難成人的營養支持（鼻胃管與胃造口比較）。<a href="https://www.cochrane.org/zh-hant/evidence/CD008096_nutritional-support-adults-swallowing-difficulties">cochrane.org</a></li>
+        <li>Practical Gastroenterology (2004). Prevention and management of complications of PEG tubes；Evaluation of 644 PEG patients (2023)。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10228164/">pmc.ncbi.nlm.nih.gov</a></li>
+        <li>Mitchell SL, et al. Tube feeding in US nursing home residents with advanced dementia, 2000–2014. JAMA. 2016. <a href="https://jamanetwork.com/journals/jama/fullarticle/2544627">jamanetwork.com</a></li>
+        <li>Hanson LC, et al. Improving decision-making for feeding options in advanced dementia: a randomized, controlled trial. J Am Geriatr Soc. 2011. <a href="https://pubmed.ncbi.nlm.nih.gov/22091750/">pubmed.ncbi.nlm.nih.gov</a></li>
+        <li>ESPEN Guidelines on Enteral Nutrition: Geriatrics；ESPEN guideline on home enteral nutrition. <a href="https://www.espen.org/files/ESPEN-Guidelines/ESPEN_guideline_on_home_enteral_nutrition.pdf">espen.org</a></li>
+        <li>鈴木裕（2014）。胃ろうをめぐる問題と診療報酬改定。医学書院。<a href="https://www.igaku-shoin.co.jp/paper/archive/y2014/PA03078_02">igaku-shoin.co.jp</a></li>
+        <li>工商時報（2025）。移除鼻胃管計畫放寬適用對象（2022–2024 年移除人數）。<a href="https://www.ctee.com.tw/news/20250731701304-431401">ctee.com.tw</a></li>
+        <li>大紀元（2025）。113 年度仰賴鼻胃管進食人口近 40 萬人。<a href="https://www.epochtimes.com/b5/25/7/31/n14564670.htm">epochtimes.com</a></li>
+        <li>遠見健康（2022）。健保署統計：2021 年約 27 萬人申請放置鼻胃管。<a href="https://health.gvm.com.tw/article/87147">health.gvm.com.tw</a></li>
+        <li>Nationwide prevalence and outcomes of long-term nasogastric tube placement in adults (Taiwan Longitudinal Health Insurance Database). 2022. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9102306/">ncbi.nlm.nih.gov</a></li>
+        <li>Youssef G, et al. Percutaneous endoscopic gastrostomy versus nasogastric tube feeding in post-stroke dysphagia: a meta-analysis study. Top Stroke Rehabil. 2026. <a href="https://pubmed.ncbi.nlm.nih.gov/41496648/">pubmed.ncbi.nlm.nih.gov</a></li>
+        <li>Outcomes of stroke patients undergoing percutaneous endoscopic gastrostomy: a systematic review and meta-analysis. 2024. <a href="https://pubmed.ncbi.nlm.nih.gov/39190711/">pubmed.ncbi.nlm.nih.gov</a></li>
+        <li>Davies N, et al. Enteral tube feeding for people with severe dementia. Cochrane Database Syst Rev. 2021;8:CD013503. <a href="https://pubmed.ncbi.nlm.nih.gov/34836919/">pubmed.ncbi.nlm.nih.gov</a></li>
+        <li>Comparison of survival and pneumonia risk in advanced dementia patients on nasogastric tube feeding versus careful hand feeding (Hong Kong prospective cohort). 2025. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12584983/">pmc.ncbi.nlm.nih.gov</a></li>
+        <li>Reduced pneumonia risk in advanced dementia patients on careful hand feeding compared with nasogastric tube feeding. JAMDA. 2022. <a href="https://www.jamda.com/article/S1525-8610(22)00255-9/fulltext">jamda.com</a></li>
+        <li>Chou HH, Tsou MT, Hwang LC. Nasogastric tube feeding versus assisted hand feeding in-home healthcare older adults with severe dementia in Taiwan. BMC Geriatr. 2020;20:60. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7023686/">pmc.ncbi.nlm.nih.gov</a></li>
+        <li>Banda KJ, et al. Prevalence of dysphagia and risk of pneumonia and mortality in acute stroke patients: a meta-analysis. BMC Geriatr. 2022;22:420. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9103417/">pmc.ncbi.nlm.nih.gov</a></li>
+        <li>Dysphagia management is associated with reduced mortality in patients with moderate to severe acute ischemic stroke (Austrian Stroke Unit Registry). Neurol Ther. 2025. <a href="https://link.springer.com/article/10.1007/s40120-025-00783-1">link.springer.com</a></li>
+        <li>臺大醫院。管灌方式之選擇：長期管灌需要使用鼻胃管還是胃造廔管好（費用說明）。<a href="https://www.ntuh.gov.tw/ckfinder_file/TQM/files/%E5%85%A7%E7%A7%91%E9%83%A8%EF%BC%9A%E7%AE%A1%E7%81%8C%E6%96%B9%E5%BC%8F%E4%B9%8B%E9%81%B8%E6%93%87%E9%95%B7%E6%9C%9F%E7%AE%A1%E7%81%8C%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E9%BC%BB%E8%83%83%E7%AE%A1%E9%82%84%E6%98%AF%E8%83%83%E9%80%A0%E5%BB%94%E7%AE%A1%E5%A5%BD.pdf">ntuh.gov.tw</a></li>
+        <li>《病人自主權利法》。</li>
+      </ol>
+    </div>
+    <p class="sign">設計者｜愛迪樂 鍾孟修 職能治療師</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // theme
+  var root=document.documentElement;
+  var tb=document.getElementById('themeBtn');
+  var saved=null;try{saved=localStorage.getItem('ngTheme');}catch(e){}root.setAttribute('data-theme',saved||'light');
+  tb.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    var dark=cur==='dark';
+    var next=dark?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('ngTheme',next);}catch(e){}
+  });
+
+  // sound
+  var ctx;
+  function tone(freqs){
+    try{
+      ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();
+      freqs.forEach(function(f,i){
+        var o=ctx.createOscillator(),g=ctx.createGain();
+        o.type='sine';o.frequency.value=f;
+        var t=ctx.currentTime+i*0.12;
+        g.gain.setValueAtTime(0.0001,t);
+        g.gain.exponentialRampToValueAtTime(0.18,t+0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001,t+0.35);
+        o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+0.4);
+      });
+    }catch(e){}
+  }
+
+  // hero
+  var stage=document.getElementById('stage'),btn=document.getElementById('trainBtn'),cap=document.getElementById('caption');
+  btn.addEventListener('click',function(){
+    if(stage.classList.contains('removed')){
+      stage.classList.remove('removed');
+      cap.textContent='吞嚥練起來，才有機會拿掉管子';
+      btn.textContent='陪阿嬤練吞嚥';
+    }else{
+      stage.classList.add('removed');
+      cap.textContent='評估、練習、再評估，阿嬤又能吃飯了';
+      btn.textContent='再看一次';
+      setTimeout(function(){tone([523,659,784]);},1400);
+    }
+  });
+
+  // compare filter
+  var sw=document.querySelectorAll('.switch button'),grid=document.getElementById('compareGrid');
+  sw.forEach(function(b){b.addEventListener('click',function(){
+    sw.forEach(function(x){x.setAttribute('aria-selected','false');});
+    b.setAttribute('aria-selected','true');
+    var f=b.dataset.f;
+    grid.classList.toggle('filtered',f!=='all');
+    grid.querySelectorAll('.way').forEach(function(w){w.classList.toggle('focus',w.dataset.k===f);});
+  });});
+
+  // quiz
+  var Q=[
+    {t:'插了鼻胃管，就一輩子拔不掉。',a:'X',e:'不一定。經過吞嚥評估與訓練，不少人有機會恢復用嘴巴吃，再移除鼻胃管。健保也有鼓勵醫療團隊協助移除的給付項目。'},
+    {t:'胃造口一定要開大刀、全身麻醉。',a:'X',e:'常見的經皮內視鏡胃造口，是用胃鏡定位、從腹部做小開口，操作約 15～30 分鐘，多數不需要開腹。'},
+    {t:'做了胃造口，就不能再用嘴巴吃東西。',a:'X',e:'胃造口讓喉嚨淨空，反而比較方便練習吞嚥。吞嚥進步後，可以慢慢增加由口進食，甚至移除胃造口。'},
+    {t:'做了胃造口，以後都不能洗澡。',a:'X',e:'術後約一週、經醫護人員評估傷口穩定後，就可以淋浴。洗完把造口擦乾即可。'},
+    {t:'胃造口要開刀換管，每次都要住院。',a:'X',e:'第一次造口需要住院約 3～7 天；之後約半年到一年換一次管，在門診內視鏡室就能完成，不需住院。'},
+    {t:'插著鼻胃管，就不會得吸入性肺炎。',a:'X',e:'口水和胃裡的東西仍可能嗆進氣管。每天做好口腔清潔、灌食時與灌食後維持半坐姿，都很重要。'},
+    {t:'胃造口有健保給付。',a:'O',e:'健保自民國 98 年 11 月起給付經皮內視鏡胃造口術，包含技術與管路材料，並每半年給付一次換管。'},
+    {t:'原本看神經內科，想做胃造口就一定要換主治醫師。',a:'X',e:'不用換醫師。住院中可以請主治醫師照會胃腸肝膽科；門診可以請原醫師開轉診單。'},
+    {t:'我可以事先表達，將來在特定情況下要不要接受管灌。',a:'O',e:'依《病人自主權利法》，透過預立醫療照護諮商並簽署預立醫療決定，就可以事先寫下自己的意願。'},
+    {t:'研究發現，胃造口和鼻胃管相比，生活品質較好。',a:'O',e:'整合 11 個隨機對照試驗的系統性回顧發現，胃造口組生活品質較好，鼻胃管組灌食失敗較多，兩組死亡率與整體併發症沒有差異。'}
+  ];
+  var box=document.getElementById('quizBox'),answered=0,correct=0;
+  Q.forEach(function(q,i){
+    var d=document.createElement('div');d.className='q';
+    d.innerHTML='<p class="qt">'+(i+1)+'. '+q.t+'</p><div class="ox"><button data-v="O" aria-label="O，正確">O</button><button data-v="X" aria-label="X，錯誤">X</button></div><div class="ans"></div>';
+    d.querySelectorAll('.ox button').forEach(function(b){b.addEventListener('click',function(){
+      if(d.classList.contains('done'))return;
+      var ok=b.dataset.v===q.a;
+      b.classList.add('picked');
+      d.classList.add('done',ok?'right':'wrong');
+      d.querySelector('.ans').innerHTML='<strong>'+(ok?'答對了！':'答案是 '+q.a)+'</strong><br>'+q.e;
+      tone(ok?[659,880]:[330,262]);
+      answered++;if(ok)correct++;
+      if(answered===Q.length){document.getElementById('score').textContent='你答對了 '+correct+' / '+Q.length+' 題，把這一頁分享給家人吧。';}
+    });});
+    box.appendChild(d);
+  });
+
+  // question card
+  var QS=['這條鼻胃管預計要放多久？','什麼時候會再評估吞嚥功能？可以請語言治療師評估嗎？','需要做吞嚥攝影或吞嚥內視鏡檢查嗎？','如果超過一個月還需要灌食，適合評估胃造口嗎？','胃造口要由哪一科執行？可以幫我們照會或轉診嗎？','做胃造口要住院幾天？有哪些費用需要自付？','胃造口管多久換一次？平常怎麼清潔、洗澡要注意什麼？','出院後由誰繼續做吞嚥訓練？可以轉介長照復能嗎？','如果是生命末期或極重度失智，有沒有舒適進食的選擇？']
+  var ul=document.getElementById('checks');
+  QS.forEach(function(s,i){
+    var li=document.createElement('li');
+    li.innerHTML='<label><input type="checkbox" value="'+i+'" checked> <span>'+s+'</span></label>';
+    ul.appendChild(li);
+  });
+  var toast=document.getElementById('toast');
+  document.getElementById('copyBtn').addEventListener('click',function(){
+    var picked=[].slice.call(ul.querySelectorAll('input:checked')).map(function(c,i){return (i+1)+'. '+QS[+c.value];});
+    if(!picked.length){toast.textContent='請先勾選至少一個問題。';return;}
+    var text='我想請教醫療團隊：\n'+picked.join('\n');
+    var done=function(){toast.textContent='已複製 '+picked.length+' 個問題，可以貼到 LINE 傳給家人。';};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fallback);}else{fallback();}
+    function fallback(){var t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();try{document.execCommand('copy');done();}catch(e){toast.textContent='無法自動複製，請長按文字手動複製。';}document.body.removeChild(t);}
+  });
+  document.getElementById('printBtn').addEventListener('click',function(){window.print();});
+
+  // helper
+  var ans={};
+  document.querySelectorAll('.hq').forEach(function(h){
+    h.querySelectorAll('button').forEach(function(b){
+      b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){
+        h.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false');});
+        b.setAttribute('aria-pressed','true');
+        ans[h.dataset.q]=b.dataset.v;
+        render();
+      });
+    });
+  });
+  function render(){
+    var r=document.getElementById('result');
+    if(!(ans.time&&ans.aware&&ans.stage))return;
+    var items=[],title;
+    if(ans.stage==='end'){
+      title='先談「怎麼讓他舒服」';
+      items.push('請醫療團隊說明灌食在這個階段能帶來什麼、不能帶來什麼。');
+      items.push('詢問舒適進食與安寧照護團隊的協助。');
+      items.push('回想本人過去說過的想法，或確認是否已有預立醫療決定。');
+    }else{
+      if(ans.aware!=='no'){
+        title='先談「練回由口進食」';
+        items.push('請語言治療師做吞嚥評估，必要時安排吞嚥檢查。');
+        items.push('確認出院後的吞嚥訓練由誰接手，可洽 1966 申請長照復能。');
+      }else{
+        title='先談「清醒度與整體照顧」';
+        items.push('請醫師說明目前影響清醒度的原因，以及有沒有改善的機會。');
+        items.push('先做好口腔清潔與擺位，等狀況穩定再安排吞嚥評估。');
+      }
+      if(ans.time!=='short'){
+        items.push('鼻胃管已經或預計放超過一個月，可以請醫師評估胃造口是否適合。');
+      }else{
+        items.push('和醫師約好再評估的時間，例如插管後約三週。');
+      }
+      if(ans.stage==='chronic'){items.push('一起討論長期的目標：想維持的生活品質，以及本人重視的事情。');}
+    }
+    r.innerHTML='<h3>'+title+'</h3><ul>'+items.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>';
+    r.classList.add('show');
+  }
+
+  document.querySelectorAll('.cost tbody tr').forEach(function(tr){var tds=tr.querySelectorAll('td');if(tds[0])tds[0].setAttribute('data-label','鼻胃管');if(tds[1])tds[1].setAttribute('data-label','胃造口');});
+  // bars animate when visible
+  var barSets=document.querySelectorAll('.bars');
+  function grow(set){var max=parseFloat(set.dataset.max);set.querySelectorAll('.fill').forEach(function(f){f.style.height=(parseFloat(f.dataset.v)/max*100)+'%';});}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){grow(e.target);io.unobserve(e.target);}});},{threshold:.3});
+    barSets.forEach(function(s){io.observe(s);});
+  }else{barSets.forEach(grow);}
+})();
+</script>
+</body>
+</html>
